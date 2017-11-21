@@ -1,13 +1,12 @@
 node default {
-
+  file { '/root/README' :
+    ensure => file,
+    content => "Welcome to ${fqdn}, this is a default server, uptime about ${system_uptime}\n",
+  }
 }
 
 node 'master.puppet.vm' {
   include role::master_server 
-  file { '/root/README' :
-    ensure => file,
-    content => "Welcome to ${fqdn}, uptime about ${system_uptime}\n",
-  }
 }
 
 node 'minetest.puppet.vm' {
