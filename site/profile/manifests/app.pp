@@ -1,6 +1,6 @@
 class profile::app {
 
-  file{ '/users/home/' :
+  file{ ['/users/' , '/users/home'] :
     ensure => directory,
     mode => '2764',
     owner => 'root',
