@@ -7,7 +7,7 @@ class minecraft(
   }
   file { "${install_dir}/minecraft_server.jar" :
     ensure => file,
-    source => $url
+    source => $url,
     before => Service['minecraft'], 
   }
   package { 'java' :
@@ -21,7 +21,7 @@ class minecraft(
     ensure => file,
     content => epp('minecraft/minecraft.service', {
       install_dir => $install_dir
-    })
+    }),
   }
   service { 'minecraft':
     ensure => running,
