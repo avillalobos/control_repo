@@ -16,5 +16,6 @@ class profile::app {
     uid => '7777' ,
     gid => '666',
     home => '/users/home/lsst-daq',
+    managehome => 'true'
   }
 }
