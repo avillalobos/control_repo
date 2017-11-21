@@ -2,8 +2,8 @@ class profile::app {
 
   file{ '/users/home/' :
     ensure => directory,
-    mode => 2764,
-    owner => root,
+    mode => '2764',
+    owner => 'root',
   }
 
   user{ 'lsst-daq':
