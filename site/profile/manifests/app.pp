@@ -6,6 +6,11 @@ class profile::app {
     owner => 'root',
   }
 
+  group{'lsst':
+    ensure => 'present',
+    gid => '666',
+  }
+
   user{ 'lsst-daq':
     ensure => 'present',
     uid => '7777' ,
