@@ -8,8 +8,8 @@ class profile::app {
 
   user{ 'lsst-daq':
     ensure => 'present',
-    uid => '7777'
-    gui => '666'
+    uid => '7777' ,
+    gui => '666',
     home => '/users/home/lsst-daq',
   }
 }
