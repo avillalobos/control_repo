@@ -6,6 +6,7 @@ class profile::base {
   }
   file_line { 'SELINUX=permissive':
     path  => '/etc/selinux/config',
+    line => 'SELINUX=permissive'
     match => 'SELINUX=*',
   }
   user { 'admin':
