@@ -1,5 +1,5 @@
  class profile::base {
-  file { [ '/CCS' , '/LSST' ] :
+  file { [ '/CCS' , '/LSST' , '/var/log/ccs' , '/etc/ccs' ] :
    ensure => directory,
    mode => '1764',
   }
