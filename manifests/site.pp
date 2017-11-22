@@ -5,7 +5,7 @@ node default {
   }
 }
 
-node '/^master/' {
+node /^master/ {
   include role::master_server 
 }
 
