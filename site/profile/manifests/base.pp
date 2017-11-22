@@ -1,10 +1,15 @@
- class profile::base {
+class profile::base {
+
   file { [ '/CCS' , '/LSST' , '/var/log/ccs' , '/etc/ccs' ] :
-   ensure => directory,
-   mode => '1764',
+    ensure => directory,
+    mode => '1764',
+  }
+  file_line { 'SELINUX=permissive':
+    path  => '/etc/selinux/config',
+    match => 'SELINUX=*',
   }
   user { 'admin':
     ensure => present,
-    }
+  }
   include profile::ssh_server
- }
+}
