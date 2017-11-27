@@ -4,6 +4,11 @@ class profile::base {
     ensure => directory,
     mode => '1764',
   }
+  file_line { 'SELINUX=permissive':
+    path  => '/etc/selinux/config',
+    line => 'SELINUX=permissive',
+    match => '^SELINUX=+',
+  }
   user { 'admin':
     ensure => present,
   }
