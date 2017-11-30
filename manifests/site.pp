@@ -10,7 +10,7 @@ node /^master/ {
 }
 
 node "antares.lsst.local"{
-	include role:master_server
+	include role::master_server
 }
 
 node 'app.puppet.vm' {
