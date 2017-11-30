@@ -1,4 +1,4 @@
-class profile::ts-sw-devenv{
+class profile::ts_sw_dev_env{
 
 	package { 'gcc-c++':
 		ensure => present,
