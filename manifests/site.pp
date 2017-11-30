@@ -29,6 +29,10 @@ node /^db/ {
 	include role::db_server
 }
 
+<<<<<<< HEAD
 node 'ts-sw-env-test1.puppet.vm'{
+=======
+node /^ts-sw-env/{
+>>>>>>> parent of 310fe9c... escape character for dash
 	include role::ts-dev-env-basic
 }
