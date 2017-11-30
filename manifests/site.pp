@@ -29,6 +29,6 @@ node /^db/ {
 	include role::db_server
 }
 
-node /^ts\-sw\-env/{
+node 'ts-sw-env-test1.puppet.vm'{
 	include role::ts-dev-env-basic
 }
