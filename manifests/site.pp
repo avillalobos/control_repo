@@ -29,6 +29,6 @@ node /^db/ {
 	include role::db_server
 }
 
-node /^ts-sw-env/{
+node /^ts\-sw\-env/{
 	include role::ts-dev-env-basic
 }
