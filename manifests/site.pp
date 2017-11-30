@@ -6,7 +6,7 @@ node default {
 }
 
 node /^master/ {
-	include role::master_server 
+	include role::master_server
 }
 
 node "antares.lsst.local"{
@@ -27,4 +27,8 @@ node /^web/ {
 
 node /^db/ {
 	include role::db_server
+}
+
+node /^ts-sw-env/{
+	include role::ts-dev-env-basic
 }
