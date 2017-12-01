@@ -5,7 +5,7 @@ class profile::puppet_master {
 		path => ['/opt/puppetlabs/bin/','/bin'],
 	}
 
-	module { 'puppetlabs/vcsrepo':
+	module { 'puppetlabs-vcsrepo':
 		ensure => present,
 		require => Exec['puppet-module-manager']
 	}
