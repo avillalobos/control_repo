@@ -41,7 +41,7 @@ class profile::ts_sw_dev_env{
 		ensure => present,
 	}
 	exec { 'get-custom-python':
-		command => 'wget ftp://139.229.136.22/pub/python3-to-install.tgz -O /tmp/python3-to-install.tgz ; cd /tmp/ ; tar -xvf python3-to-install.tgz ; cd Python-3.6.3; make install && pip3 install numpy',
+		command => 'wget ftp://139.229.136.22/pub/python3-to-install.tgz -O /tmp/python3-to-install.tgz ; cd /tmp/ ; tar -xvf python3-to-install.tgz ; cd Python-3.6.3; make install && /usr/local/bin/pip3 install numpy',
 		path => '/bin/',
 	}
 
