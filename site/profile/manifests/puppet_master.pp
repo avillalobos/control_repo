@@ -1,12 +1,8 @@
 class profile::puppet_master {
 
-	exec { 'puppet-module-manager':
-		command => 'puppet module install rcoleman/puppet_module',
+	exec { 'puppet-git-module':
+		command => 'puppet module install puppetlabs/vcsrepo',
 		path => ['/opt/puppetlabs/bin/','/bin'],
 	}
 
-	module { 'puppetlabs-vcsrepo':
-		ensure => present,
-		require => Exec['puppet-module-manager']
-	}
 }
